@@ -185,6 +185,7 @@ F:	package/espeak/
 
 N:	Arnout Vandecappelle <arnout@mind.be>
 F:	package/arp-scan/
+F:	package/dehydrated/
 F:	package/freescale-imx/firmware-imx/
 F:	package/freescale-imx/imx-lib/
 F:	package/gstreamer/gst-fsl-plugins/
@@ -195,6 +196,7 @@ F:	package/sqlcipher/
 F:	package/stress/
 
 N:	Asaf Kahlon <asafka7@gmail.com>
+F:	package/libuv/
 F:	package/python-jsonmodels/
 F:	package/python-reentry/
 F:	package/python-subprocess32/
@@ -966,6 +968,7 @@ N:	Jeremy Rosen <jeremy.rosen@openwide.fr>
 F:	package/fxload/
 
 N:	Joel Carlson <JoelsonCarl@gmail.com>
+F:	package/cmocka/
 F:	package/flatcc/
 
 N:	Joel Stanley <joel@jms.id.au>
@@ -974,6 +977,8 @@ F:	board/qemu/ppc64le-pseries/
 F:	configs/qemu_ppc64le_pseries_defconfig
 
 N:	Joseph Kogut <joseph.kogut@gmail.com>
+F:	package/at-spi2-atk/
+F:	package/at-spi2-core/
 F:	package/gconf/
 F:	package/libnss/
 F:	package/python-cython/
@@ -1663,6 +1668,9 @@ N:	Rodrigo Rebello <rprebello@gmail.com>
 F:	package/chocolate-doom/
 F:	package/irssi/
 F:	package/vnstat/
+
+N:	Roman Gorbenkov <roman.gorbenkov@ens2m.org>
+F:	package/davfs2/
 
 N:	Romain Naour <romain.naour@gmail.com>
 F:	package/aubio/
