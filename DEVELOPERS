@@ -803,6 +803,7 @@ F:	package/zxing-cpp/
 N:	Gaël Portay <gael.portay@savoirfairelinux.com>
 F:	package/qt5/qt5virtualkeyboard/
 F:	package/qt5/qt5webengine/
+F:	package/qt5/qt5webkit/
 F:	package/qt5/qt5webkit-examples/
 
 N:	Gary Bisson <gary.bisson@boundarydevices.com>
@@ -1882,12 +1883,11 @@ F:	package/lcdproc/
 F:	package/python-influxdb/
 
 N:	Sven Neumann <neumann@teufel.de>
-F:	package/gstreamer1/gst1-libav/
-
-N:	Sven Neumann <s.neumann@raumfeld.com>
 F:	package/glib-networking/
+F:	package/gstreamer1/gst1-libav/
 F:	package/libmms/
 F:	package/orc/
+F:	package/wampcc/
 
 N:	Sébastien Szymanski <sebastien.szymanski@armadeus.com>
 F:	package/mmc-utils/
@@ -2142,3 +2142,6 @@ F:	package/qjson/
 F:	package/quazip/
 F:	package/shapelib/
 F:	package/tinc/
+
+N:	Pierre Ducroquet <pinaraf@pinaraf.info>
+F:	package/kf5/
