@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-OPENCV3_VERSION = 3.3.0
+OPENCV3_VERSION = 3.4.2
 OPENCV3_SITE = $(call github,opencv,opencv,$(OPENCV3_VERSION))
 OPENCV3_INSTALL_STAGING = YES
 OPENCV3_LICENSE = BSD-3-Clause
@@ -100,8 +100,13 @@ OPENCV3_CONF_OPTS += \
 #   adding '-mcpu=G3 -mtune=G5' to them, which is already handled by Buildroot.
 OPENCV3_CONF_OPTS += \
 	-DENABLE_POWERPC=OFF \
-	-DENABLE_NEON=$(if $(BR2_ARM_CPU_HAS_NEON),ON,OFF) \
-	-DENABLE_VFPV3=$(if $(BR2_ARM_CPU_HAS_VFPV3),ON,OFF)
+	-DENABLE_NEON=$(if $(BR2_ARM_CPU_HAS_NEON),ON,OFF)
+
+ifeq ($(BR2_ARCH_IS_64):$(BR2_ARM_CPU_HAS_VFPV3),:y)
+OPENCV3_CONF_OPTS += -DENABLE_VFPV3=ON
+else
+OPENCV3_CONF_OPTS += -DENABLE_VFPV3=OFF
+endif
 
 # Cuda stuff
 OPENCV3_CONF_OPTS += \
