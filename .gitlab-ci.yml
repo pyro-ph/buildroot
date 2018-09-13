@@ -43,8 +43,7 @@ check-flake8:
 
 check-package:
     script:
-        - find . -type f \( -name '*.mk' -o -name '*.hash' -o -name 'Config.*' \)
-            -exec ./utils/check-package {} +
+        - make check-package
 
 .defconfig: &defconfig
     # Running the defconfigs for every push is too much, so limit to
@@ -231,6 +230,7 @@ raspberrypi3_64_defconfig: *defconfig
 raspberrypi3_defconfig: *defconfig
 raspberrypi3_qt5we_defconfig: *defconfig
 raspberrypi_defconfig: *defconfig
+riotboard_defconfig: *defconfig
 roseapplepi_defconfig: *defconfig
 s6lx9_microboard_defconfig: *defconfig
 sheevaplug_defconfig: *defconfig
