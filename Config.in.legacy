@@ -145,6 +145,31 @@ endif
 ###############################################################################
 comment "Legacy options removed in 2018.11"
 
+config BR2_TARGET_XLOADER
+	bool "xloader has been removed"
+	select BR2_LEGACY
+	help
+	  The package has been removed as u-boot SPL provides
+	  similar functionality
+
+config BR2_PACKAGE_TIDSP_BINARIES
+	bool "tidsp-binaries package removed"
+	select BR2_LEGACY
+	help
+	  The tidsp-binaries package was removed.
+
+config BR2_PACKAGE_DSP_TOOLS
+	bool "dsp-tools package removed"
+	select BR2_LEGACY
+	help
+	  The dsp-tools package was removed.
+
+config BR2_PACKAGE_GST_DSP
+	bool "gst-dsp package removed"
+	select BR2_LEGACY
+	help
+	  The gst-dsp package was removed.
+
 config BR2_PACKAGE_BOOTUTILS
 	bool "bootutils package removed"
 	select BR2_LEGACY
