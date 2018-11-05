@@ -4,12 +4,12 @@
 #
 ################################################################################
 
-LIBV4L_VERSION = 1.14.2
+LIBV4L_VERSION = 1.16.1
 LIBV4L_SOURCE = v4l-utils-$(LIBV4L_VERSION).tar.bz2
 LIBV4L_SITE = https://linuxtv.org/downloads/v4l-utils
 LIBV4L_INSTALL_STAGING = YES
 LIBV4L_DEPENDENCIES = host-pkgconf
-LIBV4L_CONF_OPTS = --disable-doxygen-doc
+LIBV4L_CONF_OPTS = --disable-doxygen-doc --disable-qvidcap
 # We're patching contrib/test/Makefile.am
 LIBV4L_AUTORECONF = YES
 # add host-gettext for AM_ICONV macro
@@ -55,6 +55,10 @@ endif
 ifeq ($(BR2_PACKAGE_LIBV4L_UTILS),y)
 LIBV4L_CONF_OPTS += --enable-v4l-utils
 LIBV4L_DEPENDENCIES += $(TARGET_NLS_DEPENDENCIES)
+
+# Disable clang that is used to build BPF (in-kernel bytecode machine) protocols
+LIBV4L_CONF_ENV += ac_cv_prog_CLANG=""
+
 ifeq ($(BR2_PACKAGE_QT5BASE)$(BR2_PACKAGE_QT5BASE_GUI)$(BR2_PACKAGE_QT5BASE_WIDGETS),yyy)
 LIBV4L_CONF_OPTS += --enable-qv4l2
 LIBV4L_DEPENDENCIES += qt5base

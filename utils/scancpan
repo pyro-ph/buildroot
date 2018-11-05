@@ -526,6 +526,7 @@ my %checksum;           # author -> list of checksum
 my $mirror = 'http://cpan.metacpan.org';        # a CPAN mirror
 my $mcpan = MetaCPAN::API::Tiny->new(base_url => 'http://fastapi.metacpan.org/v1');
 my $ua = HTTP::Tiny->new();
+my $new_pkgs;
 
 my %white_list = (
     'ExtUtils-Config' => 1,
@@ -566,6 +567,9 @@ sub find_license_files {
         push @license_files, $_ if m/(ARTISTIC|COPYING|COPYRIGHT|LICENSE)/i;
     }
     if (scalar @license_files == 0 && $manifest =~ m/(README)[\n\s]/i) {
+        @license_files = ($1);
+    }
+    if (scalar @license_files == 0 && $manifest =~ m/(README\.md)[\n\s]/i) {
         @license_files = ($1);
     }
     return @license_files;
@@ -684,9 +688,13 @@ while (my ($distname, $dist) = each %dist) {
     my $mkname = $dirname . q{/} . $fsname . q{.mk};
     my $hashname = $dirname . q{/} . $fsname . q{.hash};
     my $brname = brname( $fsname );
-    mkdir $dirname unless -d $dirname;
+    unless (-d $dirname) {
+        mkdir $dirname;
+        $new_pkgs = 1;
+    }
     if ($need_target{$distname} && ($force || !-f $cfgname)) {
         $dist->{abstract} =~ s|\s+$||;
+        $dist->{abstract} .= q{.} unless $dist->{abstract} =~ m|\.$|;
         my $abstract = wrap( q{}, qq{\t  }, $dist->{abstract} );
         my $homepage = $dist->{resources}->{homepage} || qq{https://metacpan.org/release/${distname}};
         say qq{write ${cfgname}} unless $quiet;
@@ -773,24 +781,26 @@ while (my ($distname, $dist) = each %dist) {
     }
 }
 
-my %pkg;
-my $cfgname = q{package/Config.in};
-if (-f $cfgname) {
-    open my $fh, q{<}, $cfgname;
-    while (<$fh>) {
-        chomp;
-        $pkg{$_} = 1 if m|package/perl-|;
+if ($new_pkgs) {
+    my %pkg;
+    my $cfgname = q{package/Config.in};
+    if (-f $cfgname) {
+        open my $fh, q{<}, $cfgname;
+        while (<$fh>) {
+            chomp;
+            $pkg{$_} = 1 if m|package/perl-|;
+        }
+        close $fh;
     }
-    close $fh;
-}
 
-foreach my $distname (keys %need_target) {
-    my $fsname = fsname( $distname );
-    $pkg{qq{\tsource "package/${fsname}/Config.in"}} = 1;
-}
+    foreach my $distname (keys %need_target) {
+        my $fsname = fsname( $distname );
+        $pkg{qq{\tsource "package/${fsname}/Config.in"}} = 1;
+    }
 
-say qq{${cfgname} must contain the following lines:};
-say join qq{\n}, sort keys %pkg;
+    say qq{${cfgname} must contain the following lines:};
+    say join qq{\n}, sort keys %pkg;
+}
 
 say join qq{\n}, @info;
 

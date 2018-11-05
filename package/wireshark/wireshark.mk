@@ -19,10 +19,8 @@ WIRESHARK_AUTORECONF = YES
 # wireshark adds -I$includedir to CFLAGS, causing host/target headers mixup.
 # Work around it by pointing includedir at staging
 WIRESHARK_CONF_OPTS = \
-	--without-krb5 \
 	--enable-static=no \
 	--with-libsmi=no \
-	--with-lua=no \
 	--with-pcap=$(STAGING_DIR)/usr \
 	--includedir=$(STAGING_DIR)/usr/include
 
@@ -85,11 +83,33 @@ else
 WIRESHARK_CONF_OPTS += --with-gcrypt=no
 endif
 
+ifeq ($(BR2_PACKAGE_LIBKRB5),y)
+WIRESHARK_CONF_OPTS += --with-krb5=$(STAGING_DIR)/usr
+WIRESHARK_DEPENDENCIES += libkrb5
+else
+WIRESHARK_CONF_OPTS += --without-krb5
+endif
+
 ifeq ($(BR2_PACKAGE_LIBNL),y)
 WIRESHARK_CONF_OPTS += --with-libnl
 WIRESHARK_DEPENDENCIES += libnl
 else
 WIRESHARK_CONF_OPTS += --without-libnl
+endif
+
+ifeq ($(BR2_PACKAGE_LIBSSH),y)
+WIRESHARK_CONF_OPTS += --with-libssh=$(STAGING_DIR)/usr
+WIRESHARK_DEPENDENCIES += libssh
+else
+WIRESHARK_CONF_OPTS += --without-libssh
+endif
+
+# no support for lua53 yet
+ifeq ($(BR2_PACKAGE_LUA_5_1)$(BR2_PACKAGE_LUA_5_2),y)
+WIRESHARK_CONF_OPTS += --with-lua
+WIRESHARK_DEPENDENCIES += lua
+else
+WIRESHARK_CONF_OPTS += --without-lua
 endif
 
 ifeq ($(BR2_PACKAGE_SBC),y)
