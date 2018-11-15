@@ -413,6 +413,7 @@ N:	Carlo Caione <carlo.caione@gmail.com>
 F:	package/sunxi-boards/
 
 N:	Carlos Santos <casantos@datacom.com.br>
+F:	package/aer-inject/
 F:	package/busybox/
 F:	package/gtest/
 F:	package/initscripts/
@@ -468,6 +469,7 @@ F:	package/batman-adv/
 F:	package/docker-containerd/
 F:	package/docker-engine/
 F:	package/docker-proxy/
+F:	package/go/
 F:	package/mosh/
 F:	package/rtl8821au/
 F:	package/runc/
@@ -1653,6 +1655,7 @@ F:	package/ddrescue/
 F:	package/dejavu/
 F:	package/dillo/
 F:	package/edid-decode/
+F:	package/ell/
 F:	package/ghostscript-fonts/
 F:	package/gstreamer1/gst1-interpipe/
 F:	package/gstreamer1/gst1-validate/
@@ -2087,9 +2090,6 @@ F:	package/squashfs/
 F:	package/wayland/
 F:	package/weston/
 F:	toolchain/
-
-N:	Tiago Brusamarello <tiago.brusamarello@datacom.com.br>
-F:	package/aer-inject/
 
 N:	Timo Ketola <timo.ketola@exertus.fi>
 F:	package/fbgrab/
