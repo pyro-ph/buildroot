@@ -1,3 +1,26 @@
+2018.11.1, Released December 20th, 2018
+
+	Important / security related fixes.
+
+	defconfigs: Fixes for bananapi m2 ultra, ci20
+
+	Download wrapper: Fix for urlencode handling
+
+	Updated/fixed packages: asterisk, docker-compose,
+	docker-engine, dt-utils, gnutls, go, grub, libbsd, libcurl,
+	libpgpme, libiscsi, liblo, libmpd, libopenssl, liboping,
+	libpam-tacplus, libpjsip, linux-firmware, liquid-dsp,
+	lua-cqueue, luvi, lxc, lynx, nginx, nodejs, openzwave, php,
+	pps-tools, proftpd, prosody, sdl2_net, squashfs, swupdate,
+	uclibc, vtu, webkitgtk, wine, xen
+
+	New packages: docker-cli
+
+	Issues resolved (http://bugs.uclibc.org):
+
+	#11426: pps-tools bash dependency
+	#11536: dt-utils building fails with glibc 2.28
+
 2018.11, Released December 1st, 2018
 
 	Minor fixes.
@@ -160,6 +183,26 @@
 	#11421: GCC error message for ARM Cortex-A9/ARM.V7
 	#11451: Can't find libmpfr.so.4 when using external toolchain on ubuntu..
 	#11481: Docs: Is external.desc required?
+
+2018.08.4, Released December 20th, 2018
+
+	Important / security related fixes.
+
+	Defconfigs: Fixes for ci20, orangepi zero plus 2
+
+	Download wrapper: Fix for urlencode handling
+
+	Updated/fixed packages: c-ares, dante, docker-compose,
+	domoticz, freetype, ghostscript, gnutls, libcurl, libgpgme,
+	libid3tag, libiscsi, libmpd, libopenssl, liboping, libpjsip,
+	linux-firmware, liquid-dsp, luvi, lynx, msgpack, nginx,
+	nodejs, php, popt, pps-tools, prosody, python-numpy,
+	python-requests, samba4, sdl2_net, squashfs, swupdate,
+	systemd, uclibc, vte, webkitgtk, wine, xfsprogs
+
+	Issues resolved (http://bugs.uclibc.org):
+
+	#11426: pps-tools bash dependency
 
 2018.08.3, Released November 26th, 2018
 
@@ -698,6 +741,23 @@
 	#10896: /bin/sh not in /etc/shells
 	#10961: Grub2 fails to build for x86_64 when BR2_SSP_ALL is
 		enabled
+
+2018.02.9, Released December 20th, 2018
+
+	Important / security related fixes.
+
+	defconfigs: Fixes for ci20
+
+	Updated/fixed packages: c-ares, dante, freetype, ghostscript,
+	glibc, gnutls, go, libcurl, libgpgme, libid3tag, libiscsi,
+	libmpd, libopenssl, libpjsip, linux, liquid-dsp, luvi, lynx,
+	msgpack, nginx, nodejs, php, popt, pps-tools, python-numpy,
+	python-requests, samba4, sdl2_net, squashfs, swupdate, uclibc,
+	wine, webkitgtk, xfsprogs
+
+	Issues resolved (http://bugs.uclibc.org):
+
+	#11426: pps-tools bash dependency
 
 2018.02.8, Released November 26th, 2018
 

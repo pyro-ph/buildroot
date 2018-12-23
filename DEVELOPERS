@@ -196,6 +196,7 @@ F:	package/dehydrated/
 F:	package/freescale-imx/firmware-imx/
 F:	package/freescale-imx/imx-lib/
 F:	package/gstreamer/gst-fsl-plugins/
+F:	package/libpagekite/
 F:	package/lua-bit32/
 F:	package/owfs/
 F:	package/python-bottle/
@@ -421,9 +422,11 @@ F:	package/aer-inject/
 F:	package/busybox/
 F:	package/gtest/
 F:	package/initscripts/
+F:	package/intel-microcode/
 F:	package/libpam-radius-auth/
 F:	package/libpam-tacplus/
 F:	package/modem-manager/
+F:	package/pcm-tools/
 F:	package/perl-file-util/
 F:	package/skeleton-custom/
 F:	package/skeleton-init-common/
@@ -658,6 +661,8 @@ F:	package/pifmrds/
 F:	package/ympd/
 
 N:	Erico Nunes <nunes.erico@gmail.com>
+F:	board/aarch64-efi/
+F:	configs/aarch64_efi_defconfig
 F:	package/acpica/
 F:	package/acpitool/
 F:	package/efibootmgr/
@@ -826,6 +831,7 @@ F:	package/lua*
 F:	package/lunit/
 F:	package/lzlib/
 F:	package/moarvm/
+F:	package/netsurf/
 F:	package/perl*
 F:	package/pkg-perl.mk
 F:	package/pkg-luarocks.mk
@@ -964,6 +970,8 @@ F:	board/engicam/
 F:	board/friendlyarm/nanopi-a64/
 F:	board/friendlyarm/nanopi-neo2/
 F:	board/olimex/a64-olinuxino/
+F:	board/orangepi/orangepi-lite2/
+F:	board/orangepi/orangepi-one-plus
 F:	board/orangepi/orangepi-pc2/
 F:	board/orangepi/orangepi-prime/
 F:	board/orangepi/orangepi-win/
@@ -982,6 +990,8 @@ F:	configs/engicam_imx6ul_isiot_defconfig
 F:	configs/friendlyarm_nanopi_a64_defconfig
 F:	configs/friendlyarm_nanopi_neo2_defconfig
 F:	configs/olimex_a64_olinuxino_defconfig
+F:	configs/orangepi_lite2_defconfig
+F:	configs/orangepi_one_plus_defconfig
 F:	configs/orangepi_pc2_defconfig
 F:	configs/orangepi_prime_defconfig
 F:	configs/orangepi_win_defconfig
@@ -992,6 +1002,13 @@ F:	configs/pine64_sopine_defconfig
 N:	James Hilliard <james.hilliard1@gmail.com>
 F:	package/python-aiodns/
 F:	package/python-aiohttp/
+F:	package/python-aiohttp-jinja2/
+F:	package/python-aiohttp-remotes/
+F:	package/python-aiohttp-security/
+F:	package/python-aiohttp-session/
+F:	package/python-aiohttp-sse/
+F:	package/python-aiojobs/
+F:	package/python-aiorwlock/
 F:	package/python-async-timeout/
 F:	package/python-cchardet/
 F:	package/python-multidict/
@@ -1144,6 +1161,7 @@ F:	package/llvm/
 F:	package/python-cython/
 F:	package/python-raven/
 F:	package/python-schedule/
+F:	package/python-sentry-sdk/
 F:	package/python-websockets/
 F:	package/python-xlib/
 
@@ -1233,6 +1251,8 @@ N:	Lionel Orry <lionel.orry@gmail.com>
 F:	package/mongrel2/
 
 N:	Lothar Felten <lothar.felten@gmail.com>
+F:	board/bananapi/bananapi-m2-ultra/
+F:	configs/bananapi_m2_ultra_defconfig
 F:	package/ti-sgx-demos/
 F:	package/ti-sgx-km/
 F:	package/ti-sgx-um/
@@ -2129,19 +2149,6 @@ F:	package/llvm/
 
 N:	Vanya Sergeev <vsergeev@gmail.com>
 F:	package/lua-periphery/
-
-N:	Vicente Olivert Riera <Vincent.Riera@imgtec.com>
-F:	arch/Config.in.mips
-F:	package/gnupg2/
-F:	package/hidapi/
-F:	package/libfm/
-F:	package/libfm-extra/
-F:	package/libksba/
-F:	package/menu-cache/
-F:	package/openblas/
-F:	package/openmpi/
-F:	package/pinentry/
-F:	package/trinity/
 
 N:	Vincent Prince <vincent.prince.fr@gmail.com>
 F:	package/nss-myhostname/
