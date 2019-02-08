@@ -215,7 +215,6 @@ F:	package/ti-cgt-pru/
 N:	Assaf Inbal <shmuelzon@gmail.com>
 F:	package/lbase64/
 F:	package/luabitop/
-F:	package/luacrypto/
 F:	package/luaexpatutils/
 F:	package/luaposix/
 F:	package/luasec/
@@ -426,6 +425,7 @@ F:	package/intel-microcode/
 F:	package/libpam-radius-auth/
 F:	package/libpam-tacplus/
 F:	package/modem-manager/
+F:	package/pamtester/
 F:	package/pcm-tools/
 F:	package/perl-file-util/
 F:	package/skeleton-custom/
@@ -461,6 +461,7 @@ F:	configs/orangepi_plus_defconfig
 
 N:	Chris Packham <judge.packham@gmail.com>
 F:	package/eventlog/
+F:	package/gstreamer1/gst1-shark/
 F:	package/micropython/
 F:	package/micropython-lib/
 F:	package/syslog-ng/
@@ -741,6 +742,7 @@ F:	package/cairo/
 F:	package/duktape/
 F:	package/expat/
 F:	package/flatbuffers/
+F:	package/gerbera/
 F:	package/gtksourceview/
 F:	package/gssdp/
 F:	package/gupnp/
@@ -938,7 +940,6 @@ F:	package/gr-osmosdr/
 F:	package/libusbgx/
 F:	package/python-cheetah/
 F:	package/python-markdown/
-F:	package/python-pyqt/
 F:	package/python-remi/
 F:	package/python-sip/
 
@@ -1262,6 +1263,9 @@ F:	package/ti-sgx-demos/
 F:	package/ti-sgx-km/
 F:	package/ti-sgx-um/
 
+N:	Louis-Paul Cordier <lpdev@cordier.org>
+F:	package/intel-gmmlib/
+
 N:	Luca Ceresoli <luca@lucaceresoli.net>
 F:	board/olimex/a20_olinuxino/
 F:	board/zynq/
@@ -1456,6 +1460,7 @@ F:	package/python-posix-ipc/
 F:	package/python-pypcap/
 F:	package/python-pyrex/
 F:	package/raptor/
+F:	package/rcw/
 F:	package/rng-tools/
 F:	package/rsyslog/
 F:	package/setools/
@@ -1542,6 +1547,8 @@ F:	package/python-spidev/
 
 N:	Michał Łyszczek <michal.lyszczek@bofc.pl>
 F:	board/altera/socrates_cyclone5/
+F:	board/pine64/rock64
+F:	configs/rock64_defconfig
 F:	configs/socrates_cyclone5_defconfig
 
 N:	Mike Harmony <mike.harmony@snapav.com>
@@ -1947,7 +1954,6 @@ F:	package/aoetools/
 F:	package/curlpp/
 F:	package/daq/
 F:	package/libgdiplus/
-F:	package/mongodb/
 F:	package/pimd/
 F:	package/snort/
 F:	package/stella/
@@ -2010,7 +2016,6 @@ F:	package/cache-calibrator/
 F:	package/gtest/
 F:	package/mtdev/
 F:	package/mtdev2tuio/
-F:	package/qtuio/
 
 N:	Steve Calfee <stevecalfee@gmail.com>
 F:	package/python-pymysql/
@@ -2145,6 +2150,9 @@ N:	Tzu-Jung Lee <roylee17@gmail.com>
 F:	package/dropwatch/
 F:	package/tstools/
 
+N:	Vadim Kochan <vadim4j@gmail.com>
+F:	package/brcm-patchram-plus/
+
 N:	Valentin Korenblit <valentinkorenblit@gmail.com>
 F:	package/clang/
 F:	package/clinfo/
@@ -2156,6 +2164,7 @@ F:	package/lua-periphery/
 
 N:	Vincent Prince <vincent.prince.fr@gmail.com>
 F:	package/nss-myhostname/
+F:	package/utp_com/
 
 N:	Vincent Stehlé <vincent.stehle@laposte.net>
 F:	package/i7z/
